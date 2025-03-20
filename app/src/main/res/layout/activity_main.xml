@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/enunciado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Insira dois numeros a serem calculados: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:hint="n1"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enunciado" />
+
+    <TextView
+        android:id="@+id/sinalOperacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="e"
+        app:layout_constraintBottom_toBottomOf="@id/num1"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintTop_toTopOf="@id/num1" />
+
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:hint="n2"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@id/result"
+        app:layout_constraintStart_toEndOf="@id/num1"
+        app:layout_constraintTop_toBottomOf="@id/enunciado" />
+
+    <TextView
+        android:id="@+id/sinalIgualdade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="@id/result"
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintStart_toEndOf="@+id/num2"
+        app:layout_constraintTop_toTopOf="@id/result" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/num2"
+        app:layout_constraintTop_toBottomOf="@id/enunciado" />
+
+    <TextView
+        android:id="@+id/operacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Escolha a operacao:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num1" />
+
+    <Button
+        android:id="@+id/mais"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/menos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operacao" />
+
+    <Button
+        android:id="@+id/menos"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/mais"
+        app:layout_constraintTop_toBottomOf="@id/operacao"
+        app:layout_constraintEnd_toStartOf="@+id/multiplicacao"/>
+
+    <Button
+        android:id="@+id/multiplicacao"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="x"
+        app:layout_constraintStart_toEndOf="@+id/menos"
+        app:layout_constraintEnd_toStartOf="@id/divisao"
+        app:layout_constraintTop_toBottomOf="@id/operacao" />
+
+    <Button
+        android:id="@+id/divisao"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:text="÷"
+        app:layout_constraintStart_toEndOf="@+id/multiplicacao"
+        app:layout_constraintTop_toBottomOf="@id/operacao"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
